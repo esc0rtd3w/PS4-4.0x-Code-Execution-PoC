@@ -1,7 +1,7 @@
 <!-- This page was originally made by qwertyoruiopz -->
 <html>
 <head>
-  <title>JailbreakMe PS4 3.5x/3.70/4.0x</title>
+  <title>PS3 Webkit IDPS/PSID Dumper</title>
   <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="no">
   <meta name="format-detection" content="telephone=no">
@@ -41,6 +41,23 @@
   <script>
     /* Get user agent for determining system firmware */
     var ua = navigator.userAgent;
+	//document.write(ua);
+	
+	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+	var isSupported = null;
+
+    if(fwVersion == "3.55" || fwVersion == "4.81")
+    {
+      isSupported = "1";
+      fwColor = "#00AA00";
+    }
+    else
+    {
+      isSupported = "0";
+      fwColor = "#AA0000";
+    }
+	  
+	document.write("<b>Detected Firmware Version: <font color=\"" + fwColor + "\">" + fwVersion + "</font></b>");
 
     /* Called from exploit.js upon success */
     window.postexploit = function(p)
@@ -302,7 +319,7 @@
   <script src=expl.js></script>
   <script src=gadgets.js></script>
   <script src=rop.js></script>
-  <center><h1 id=clck>...</h1><strong>By <a href='https://twitter.com/qwertyoruiopz'>qwertyoruiopz</a></strong><br/>Edited by <a href='https://twitter.com/specterdev'>SpecterDev</a><br/>This exploit has been cleaned up a bit and now has multi-firmware support!<br/></center>
+  <center><h1 id=clck>...</h1><strong>Original PS4 code by <a href='https://twitter.com/qwertyoruiopz'>qwertyoruiopz</a> and edited by <a href='https://twitter.com/specterdev'>SpecterDev</a></strong><br/><br/><br/><br/><h2>This will attempt to dump the IDPS and PSID From Your PS3 Console</h2><br/><h3>Supports 3.55 and 4.81 Firmware Versions</h3><br/></center>
   <pre id="console" style="font-size: 20px"></pre>
 </body>
 </html>

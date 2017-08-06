@@ -567,4 +567,4 @@ function run() {
   }
 }
 
-window.onload = function() { document.getElementById("clck").innerHTML = '<a href="javascript:run()">go</a>'; };
+window.onload = function() { document.getElementById("clck").innerHTML = '<a href="javascript:run()">Go</a>'; };
