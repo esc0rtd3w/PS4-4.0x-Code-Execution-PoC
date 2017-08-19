@@ -3,19 +3,6 @@ https://github.com/esc0rtd3w/ps3-playground
 ===
 
 
-PS3 3.xx/4.xx Code Execution
-
-
-
-THIS IS CURRENTLY NOT WORKING AND IS A PLACEHOLDER FOR NOW
-=============
-
-
-
-What is working:
-
-- Detects Firmware Version and Displays It On Screen
-
 
 
 Credits (original PS4 4.0x Code Execution)
